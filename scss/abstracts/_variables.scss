@@ -1,0 +1,58 @@
+// jetons de conception, source unique des valeurs (extrait du guide)
+
+$colors: (
+  "text": #1c1b2e,
+  "text-body": #3a3950,
+  "text-muted": #6b6a80,
+  "bg": #ffffff,
+  "bg-alt": #f4f5f7,
+  "border": #e3e5ea,
+  "field-border": #cbd0d8,
+  "primary": #c8402a,
+  "primary-hover": #a3311f,
+  "accent": #f4c95d,
+  "error": #b3261e,
+  "lake": #1f4e8c,
+  "forest": #2f6b3a,
+  "kiosk": #b87a1e,
+);
+
+$font-family: "Inter", system-ui, sans-serif;
+
+$font-sizes: (
+  "title-xl": 56px,
+  "title-lg": 40px,
+  "title-md": 28px,
+  "intro": 20px,
+  "body": 16px,
+  "small": 14px,
+);
+
+$line-heights: (
+  "title-xl": 64px,
+  "title-lg": 48px,
+  "title-md": 36px,
+  "intro": 32px,
+  "body": 26px,
+  "small": 22px,
+);
+
+$font-weights: (
+  "regular": 400,
+  "bold": 700,
+  "black": 800,
+);
+
+$spaces: (
+  "xs": 8px,
+  "sm": 16px,
+  "md": 24px,
+  "lg": 40px,
+  "xl": 64px,
+);
+
+$radii: (
+  "sm": 6px,
+  "md": 12px,
+  "pill": 999px,
+);

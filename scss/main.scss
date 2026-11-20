@@ -1,4 +1,7 @@
-// compilation de tout
+// charge tout les partials dans l'ordre
 
+@use "base/root";
 @use "base/reset";
 @use "base/typographie";
+@use "layout/grid";
+@use "modules/swatch";

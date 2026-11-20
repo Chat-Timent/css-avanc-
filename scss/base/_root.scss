@@ -1,0 +1,26 @@
+// trouvé sur internet, expose les jetons sur :root
+
+@use "../abstracts/variables" as v;
+
+:root {
+  --font-family: #{v.$font-family};
+
+  @each $name, $value in v.$colors {
+    --color-#{$name}: #{$value};
+  }
+  @each $name, $value in v.$font-sizes {
+    --font-size-#{$name}: #{$value};
+  }
+  @each $name, $value in v.$line-heights {
+    --lh-#{$name}: #{$value};
+  }
+  @each $name, $value in v.$font-weights {
+    --weight-#{$name}: #{$value};
+  }
+  @each $name, $value in v.$spaces {
+    --space-#{$name}: #{$value};
+  }
+  @each $name, $value in v.$radii {
+    --radius-#{$name}: #{$value};
+  }
+}

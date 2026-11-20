@@ -1,0 +1,26 @@
+// module swatch : pastille de couleur pour page composants
+@use "../abstracts/variables" as v;
+
+.swatch {
+  width: calc(var(--space-xl) * 2);
+
+  &__color {
+    display: block;
+    height: var(--space-xl);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    @each $name, $value in v.$colors {
+      &--#{$name} {
+        background-color: var(--color-#{$name});
+      }
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-top: var(--space-xs);
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+  }
+}
