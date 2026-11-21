@@ -1,0 +1,38 @@
+// champ de formulaire (libellé, saisie, aide ou msg)
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+
+  &__label {
+    font-size: var(--font-size-small);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+  }
+
+  &__input {
+    padding: var(--space-xs) var(--space-sm);
+    border: var(--border-thin) solid var(--field-border-color, var(--color-field-border));
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+
+    &:focus {
+      border-color: var(--color-primary);
+      outline: var(--border-thin) solid var(--color-primary);
+    }
+
+    &:disabled {
+      color: var(--color-text-muted);
+      background-color: var(--color-bg-alt);
+      cursor: not-allowed;
+    }
+  }
+
+  &__help {
+    font-size: var(--font-size-small);
+    color: var(--field-help-color, var(--color-text-muted));
+  }
+}

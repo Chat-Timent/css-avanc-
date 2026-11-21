@@ -1,0 +1,9 @@
+// etat is-active d'un filtre, pastille sombre
+
+.filter {
+  &.is-active {
+    color: var(--color-bg);
+    background-color: var(--color-text);
+    border-color: var(--color-text);
+  }
+}

@@ -12,3 +12,15 @@
 @use "modules/pass";
 @use "modules/scene-banner";
 @use "modules/info-block";
+@use "modules/field";
+@use "modules/checkbox";
+@use "modules/filter";
+@use "modules/faq";
+
+// j'utilise "as" pour éviter les conflits car state/button et modules/button
+// sont considérés comme identiques et créent un conflit
+
+@use "state/button" as state-button;
+@use "state/field" as state-field;
+@use "state/filter" as state-filter;
+@use "state/faq" as state-faq;

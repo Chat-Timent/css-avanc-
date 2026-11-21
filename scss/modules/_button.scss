@@ -15,28 +15,56 @@
   text-decoration: none;
   cursor: pointer;
 
+  &:focus-visible {
+    outline: var(--border-thick) solid var(--color-primary);
+    outline-offset: var(--border-thick);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   &--primary {
     color: var(--color-bg);
     background-color: var(--color-primary);
     border-color: var(--color-primary);
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-primary-hover);
+      border-color: var(--color-primary-hover);
+    }
   }
 
   &--secondary {
     color: var(--color-bg);
     background-color: var(--color-text);
     border-color: var(--color-text);
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-text-body);
+      border-color: var(--color-text-body);
+    }
   }
 
   &--outline {
     color: var(--color-text);
     background-color: var(--color-bg);
     border-color: var(--color-text);
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-bg-alt);
+    }
   }
 
   &--light {
     color: var(--color-text);
     background-color: var(--color-bg);
     border-color: var(--color-bg);
+
+    &:hover:not(:disabled) {
+      background-color: var(--color-bg-alt);
+    }
   }
 
   // taille moyenne par défaut

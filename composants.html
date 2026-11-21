@@ -67,6 +67,12 @@
       <button class="button button--secondary">Mon programme <span class="button__counter">3</span></button>
     </div>
 
+    <h3>États</h3>
+    <div class="showcase">
+      <button class="button button--primary" disabled>Désactivé</button>
+      <button class="button button--primary is-loading">Chargement</button>
+    </div>
+
     <h2>Badges</h2>
 
     <h3>Base et scènes</h3>
@@ -214,6 +220,62 @@
         <h4 class="info-block__title">Accès</h4>
         <p class="info-block__text">En train : gare de Saint-Aulnes, puis navette gratuite.</p>
       </article>
+    </div>
+    <h2>Formulaires</h2>
+
+    <h3>Champ de saisie</h3>
+    <p>Focus : clique dans un champ.</p>
+    <div class="l-grid">
+      <div class="field">
+        <label class="field__label" for="nom">Nom</label>
+        <input class="field__input" id="nom" type="text" value="Durand">
+        <span class="field__help">Texte d'aide</span>
+      </div>
+      <div class="field is-error">
+        <label class="field__label" for="email">E-mail</label>
+        <input class="field__input" id="email" type="email" value="camille.durand@">
+        <span class="field__help">Adresse e-mail invalide.</span>
+      </div>
+      <div class="field">
+        <label class="field__label" for="promo">Code promo</label>
+        <input class="field__input" id="promo" type="text" placeholder="Indisponible" disabled>
+        <span class="field__help">Désactivé</span>
+      </div>
+    </div>
+
+    <h3>Liste et case</h3>
+    <div class="l-grid">
+      <div class="field">
+        <label class="field__label" for="pass">Nombre de pass</label>
+        <select class="field__input" id="pass">
+          <option>1</option>
+          <option selected>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <label class="checkbox"><input class="checkbox__input" type="checkbox" checked> J'accepte les conditions générales</label>
+      <label class="checkbox"><input class="checkbox__input" type="checkbox"> Recevoir la newsletter</label>
+    </div>
+
+    <h2>Filtres</h2>
+    <div class="l-grid">
+      <button class="filter">Toutes les scènes</button>
+      <button class="filter is-active">Scène du Lac</button>
+      <button class="filter">Scène de la Forêt</button>
+      <button class="filter">Le Kiosque</button>
+    </div>
+
+    <h2>Questions fréquentes</h2>
+    <div class="l-grid l-grid--column">
+      <div class="faq">
+        <button class="faq__question">Les enfants sont-ils acceptés ? <span class="faq__icon" aria-hidden="true">▾</span></button>
+        <div class="faq__answer"><p>Oui, l'entrée est gratuite pour les enfants de moins de 12 ans.</p></div>
+      </div>
+      <div class="faq is-open">
+        <button class="faq__question">Puis-je revendre mon pass ? <span class="faq__icon" aria-hidden="true">▾</span></button>
+        <div class="faq__answer"><p>Oui, via la plateforme officielle de revente, jusqu'à 48 heures avant le festival. Le pass est alors réédité au nom du nouvel acheteur.</p></div>
+      </div>
     </div>
   </main>
 </body>

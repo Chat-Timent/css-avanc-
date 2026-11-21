@@ -13,4 +13,8 @@
     grid-template-columns: repeat(auto-fill, minmax(calc(var(--space-xl) * 5), 1fr));
     align-items: start;
   }
+
+    &--column {
+    flex-direction: column;
+  }
 }

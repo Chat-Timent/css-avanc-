@@ -1,0 +1,8 @@
+// etat is-error d'un champ, bordure et msg en couleur d'erreur
+
+.field {
+  &.is-error {
+    --field-border-color: var(--color-error);
+    --field-help-color: var(--color-error);
+  }
+}

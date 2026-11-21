@@ -1,0 +1,32 @@
+// faq : question repliable (accordéon)
+
+.faq {
+  border: var(--border-thin) solid var(--faq-border-color, var(--color-border));
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+
+  &__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    border: 0;
+    font-size: var(--font-size-body);
+    font-weight: var(--weight-bold);
+    text-align: left;
+    color: var(--color-text);
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__icon {
+    transform: rotate(var(--faq-icon-rotation, 0deg));
+  }
+
+  &__answer {
+    display: var(--faq-answer-display, none);
+    padding: 0 var(--space-md) var(--space-md);
+    font-size: var(--font-size-small);
+  }
+}

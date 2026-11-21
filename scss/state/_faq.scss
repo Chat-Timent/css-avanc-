@@ -1,0 +1,9 @@
+// etat is_open d'une question, réponse visible, flèche retournée, border sombre
+
+.faq {
+  &.is-open {
+    --faq-border-color: var(--color-text);
+    --faq-answer-display: block;
+    --faq-icon-rotation: 180deg;
+  }
+}

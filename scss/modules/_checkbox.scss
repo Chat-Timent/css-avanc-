@@ -1,0 +1,16 @@
+// case à cocher avec son libellé
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--font-size-small);
+  color: var(--color-text-body);
+  cursor: pointer;
+
+  &__input {
+    width: var(--space-sm);
+    height: var(--space-sm);
+    accent-color: var(--color-primary);
+  }
+}
