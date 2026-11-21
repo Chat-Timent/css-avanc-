@@ -1,0 +1,15 @@
+// module showcase : zone d'exposition des composants sur la page des compo
+
+.showcase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  padding: var(--space-sm);
+
+  &--dark {
+    border-radius: var(--radius-md);
+    background-color: var(--color-text);
+  }
+}

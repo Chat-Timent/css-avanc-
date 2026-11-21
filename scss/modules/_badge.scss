@@ -1,0 +1,61 @@
+// module badge : pastille pour une scene un statut ou un nombre
+
+.badge {
+  display: inline-block;
+  padding: calc(var(--space-xs) / 2) var(--space-xs);
+  border: var(--border-thin) solid var(--badge-color, var(--color-border));
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-small);
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  color: var(--color-text);
+  background-color: var(--badge-color, var(--color-bg-alt));
+
+  &--lake {
+    --badge-color: var(--color-lake);
+    color: var(--color-bg);
+  }
+
+  &--forest {
+    --badge-color: var(--color-forest);
+    color: var(--color-bg);
+  }
+
+  &--kiosk {
+    --badge-color: var(--color-kiosk);
+    color: var(--color-text);
+  }
+
+  &--new {
+    --badge-color: var(--color-forest);
+    color: var(--color-bg);
+  }
+
+  &--few-left {
+    --badge-color: var(--color-accent);
+    color: var(--color-text);
+  }
+
+  &--sold-out {
+    --badge-color: var(--color-error);
+    color: var(--color-bg);
+  }
+
+  &--small {
+    padding: 0 var(--space-xs);
+  }
+
+  &--large {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--font-size-body);
+  }
+
+  &--outline {
+    color: var(--badge-color, var(--color-text));
+    background-color: transparent;
+  }
+
+  &--square {
+    border-radius: var(--radius-sm);
+  }
+}

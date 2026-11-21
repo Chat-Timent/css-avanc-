@@ -1,0 +1,74 @@
+// module button : base color, couleurs, tailles, icone, compteur
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-md);
+  border: var(--border-thick) solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-body);
+  font-weight: var(--weight-bold);
+  line-height: var(--lh-small);
+  text-decoration: none;
+  cursor: pointer;
+
+  &--primary {
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  &--secondary {
+    color: var(--color-bg);
+    background-color: var(--color-text);
+    border-color: var(--color-text);
+  }
+
+  &--outline {
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border-color: var(--color-text);
+  }
+
+  &--light {
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border-color: var(--color-bg);
+  }
+
+  // taille moyenne par défaut
+  &--small {
+    padding: calc(var(--space-xs) / 2) var(--space-sm);
+    font-size: var(--font-size-small);
+  }
+
+  &--large {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-intro);
+  }
+
+  &__icon {
+    line-height: 1;
+  }
+
+  &--icon-only {
+    padding: var(--space-xs);
+  }
+
+  &__counter {
+    position: absolute;
+    top: calc(var(--space-xs) * -1);
+    right: calc(var(--space-xs) * -1);
+    min-width: var(--space-md);
+    padding: 0 calc(var(--space-xs) / 2);
+    border-radius: var(--radius-pill);
+    font-size: var(--font-size-small);
+    line-height: var(--space-md);
+    text-align: center;
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+  }
+}

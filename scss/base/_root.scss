@@ -23,4 +23,7 @@
   @each $name, $value in v.$radii {
     --radius-#{$name}: #{$value};
   }
+  @each $name, $value in v.$border-widths {
+    --border-#{$name}: #{$value};
+  }
 }
