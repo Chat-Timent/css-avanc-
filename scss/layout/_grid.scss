@@ -7,4 +7,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &--cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(var(--space-xl) * 5), 1fr));
+    align-items: start;
+  }
 }

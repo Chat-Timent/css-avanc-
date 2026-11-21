@@ -1,0 +1,87 @@
+// carte d'artiste
+
+.card {
+  --card-image-ratio: 16 / 9;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: var(--border-thin) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+
+  &__image {
+    display: block;
+    width: var(--card-image-width, 100%);
+    aspect-ratio: var(--card-image-ratio);
+    object-fit: cover;
+    border-style: solid;
+    border-color: var(--scene-color, var(--color-border));
+    border-width: var(--card-image-border, 0 0 calc(var(--space-xs) / 2) 0);
+    background-color: var(--color-bg-alt);
+  }
+
+  &__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+  }
+
+  &__title {
+    font-size: var(--card-title-size, var(--font-size-intro));
+    line-height: var(--card-title-line, var(--lh-intro));
+    text-transform: var(--card-title-transform, none);
+    color: var(--color-text);
+  }
+
+  &__info {
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+  }
+
+  &__text {
+    font-size: var(--font-size-small);
+  }
+
+  &__link {
+    font-size: var(--font-size-small);
+    font-weight: var(--weight-bold);
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  &__footer {
+    display: flex;
+    gap: var(--space-xs);
+    padding: var(--space-sm);
+    border-top: var(--border-thin) solid var(--color-border);
+  }
+
+  // variantes
+  &--text-only {
+    border-top: calc(var(--space-xs) / 2) solid var(--scene-color, var(--color-border));
+  }
+
+  &--featured {
+    --card-title-size: var(--font-size-title-md);
+    --card-title-line: var(--lh-title-md);
+    --card-title-transform: uppercase;
+  }
+
+  &--compact {
+    --card-image-ratio: 2 / 1;
+    --card-title-size: var(--font-size-body);
+    --card-title-line: var(--lh-body);
+  }
+
+  &--horizontal {
+    --card-image-width: 40%;
+    --card-image-ratio: auto;
+    --card-image-border: 0 calc(var(--space-xs) / 2) 0 0;
+
+    flex-direction: row;
+  }
+}

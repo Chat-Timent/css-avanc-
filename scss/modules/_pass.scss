@@ -1,0 +1,66 @@
+// formule de billeterie
+
+.pass {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  border: var(--border-thin) solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-body);
+  background-color: var(--color-bg);
+
+  &__badge {
+    position: absolute;
+    top: calc(var(--space-sm) * -1);
+    left: var(--space-md);
+  }
+
+  &__title {
+    font-size: var(--font-size-body);
+    font-weight: var(--weight-bold);
+    line-height: var(--lh-body);
+    color: var(--pass-title-color, var(--color-text));
+  }
+
+  &__price {
+    margin-block: var(--space-sm);
+    padding-bottom: var(--space-sm);
+    border-bottom: var(--border-thin) solid var(--pass-line, var(--color-border));
+    font-size: var(--font-size-title-md);
+    font-weight: var(--weight-black);
+    line-height: var(--lh-title-md);
+    color: var(--pass-price-color, var(--color-primary));
+  }
+
+  &__list {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-md);
+    font-size: var(--font-size-small);
+  }
+
+  &__item::before {
+    content: "✓";
+    margin-right: var(--space-xs);
+    font-weight: var(--weight-bold);
+    color: var(--pass-check-color, var(--color-forest));
+  }
+
+  &__action {
+    width: 100%;
+  }
+
+  &--featured {
+    --pass-title-color: var(--color-bg);
+    --pass-price-color: var(--color-accent);
+    --pass-line: var(--color-text-body);
+    --pass-check-color: var(--color-accent);
+
+    color: var(--color-bg);
+    background-color: var(--color-text);
+    border-color: var(--color-text);
+  }
+}
