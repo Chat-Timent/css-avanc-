@@ -1,13 +1,15 @@
 // règles pour les typos, plus aucune valeur en dure => tout vient des jetons
 // cible uniquement des éléments html, aucune classe
+// pareil que root, passe maintenant par des appels du mixin
+
+@use "../abstracts/mixins" as m;
 
 body {
   font-family: var(--font-family);
-  font-size: var(--font-size-body);
-  font-weight: var(--weight-regular);
-  line-height: var(--lh-body);
   color: var(--color-text-body);
   background-color: var(--color-bg);
+
+  @include m.text-style("body", "regular");
 }
 
 h1, h2, h3 {
@@ -15,19 +17,13 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: var(--font-size-title-xl);
-  font-weight: var(--weight-black);
-  line-height: var(--lh-title-xl);
+  @include m.text-style("title-xl", "black");
 }
 
 h2 {
-  font-size: var(--font-size-title-lg);
-  font-weight: var(--weight-bold);
-  line-height: var(--lh-title-lg);
+  @include m.text-style("title-lg", "bold");
 }
 
 h3 {
-  font-size: var(--font-size-title-md);
-  font-weight: var(--weight-bold);
-  line-height: var(--lh-title-md);
+  @include m.text-style("title-md", "bold");
 }

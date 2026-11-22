@@ -71,11 +71,11 @@ input, button, select, textarea {
 
 body {
   font-family: var(--font-family);
-  font-size: var(--font-size-body);
-  font-weight: var(--weight-regular);
-  line-height: var(--lh-body);
   color: var(--color-text-body);
   background-color: var(--color-bg);
+  font-size: var(--font-size-body);
+  line-height: var(--lh-body);
+  font-weight: var(--weight-regular);
 }
 
 h1, h2, h3 {
@@ -84,20 +84,20 @@ h1, h2, h3 {
 
 h1 {
   font-size: var(--font-size-title-xl);
-  font-weight: var(--weight-black);
   line-height: var(--lh-title-xl);
+  font-weight: var(--weight-black);
 }
 
 h2 {
   font-size: var(--font-size-title-lg);
-  font-weight: var(--weight-bold);
   line-height: var(--lh-title-lg);
+  font-weight: var(--weight-bold);
 }
 
 h3 {
   font-size: var(--font-size-title-md);
-  font-weight: var(--weight-bold);
   line-height: var(--lh-title-md);
+  font-weight: var(--weight-bold);
 }
 
 .l-grid {

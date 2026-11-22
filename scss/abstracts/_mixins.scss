@@ -1,0 +1,36 @@
+// blocs de déclarations réutilisables
+@use "functions" as f;
+
+// expose une map de jetons en propriétés personnalisées (--préfixe-nom)
+@mixin expose($prefix, $map) {
+  @each $name, $value in $map {
+    --#{$prefix}-#{$name}: #{$value};
+  }
+}
+
+// taille et interligne d'un style de texte, graisse si donnée
+@mixin text-style($name, $weight: null) {
+  font-size: f.token("font-size", $name);
+  line-height: f.token("lh", $name);
+
+  @if $weight {
+    font-weight: f.token("weight", $weight);
+  }
+}
+
+// couleurs d'un bouton et fond au hover
+@mixin button-color($text, $bg, $border: $bg, $hover-bg: null, $hover-border: null) {
+  color: $text;
+  background-color: $bg;
+  border-color: $border;
+
+  @if $hover-bg {
+    &:hover:not(:disabled) {
+      background-color: $hover-bg;
+
+      @if $hover-border {
+        border-color: $hover-border;
+      }
+    }
+  }
+}

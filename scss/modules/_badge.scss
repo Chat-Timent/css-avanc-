@@ -1,5 +1,14 @@
 // module badge : pastille pour une scene un statut ou un nombre
 
+@use "../abstracts/variables" as v;
+
+// statuts (nom, couleur de fond et du texte)
+$statuses: (
+  ("new", "forest", var(--color-bg)),
+  ("few-left", "accent", var(--color-text)),
+  ("sold-out", "error", var(--color-bg)),
+);
+
 .badge {
   display: inline-block;
   padding: calc(var(--space-xs) / 2) var(--space-xs);
@@ -11,34 +20,18 @@
   color: var(--color-text);
   background-color: var(--badge-color, var(--color-bg-alt));
 
-  &--lake {
-    --badge-color: var(--color-lake);
-    color: var(--color-bg);
+  @each $scene, $text in v.$scene-text-colors {
+    &--#{$scene} {
+      --badge-color: var(--color-#{$scene});
+      color: $text;
+    }
   }
 
-  &--forest {
-    --badge-color: var(--color-forest);
-    color: var(--color-bg);
-  }
-
-  &--kiosk {
-    --badge-color: var(--color-kiosk);
-    color: var(--color-text);
-  }
-
-  &--new {
-    --badge-color: var(--color-forest);
-    color: var(--color-bg);
-  }
-
-  &--few-left {
-    --badge-color: var(--color-accent);
-    color: var(--color-text);
-  }
-
-  &--sold-out {
-    --badge-color: var(--color-error);
-    color: var(--color-bg);
+  @each $status, $color, $text in $statuses {
+    &--#{$status} {
+      --badge-color: var(--color-#{$color});
+      color: $text;
+    }
   }
 
   &--small {

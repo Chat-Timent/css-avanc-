@@ -1,0 +1,6 @@
+// accès aux jetons exposes en propriétés personnalisées
+
+// token("space", "xs") donne var(--space-xs)
+@function token($group, $name) {
+  @return var(--#{$group}-#{$name});
+}

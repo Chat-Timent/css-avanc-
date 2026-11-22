@@ -1,29 +1,17 @@
-// expose les jetons sur :root
+// expose les jetons en propriétés personnalisées sur :root.
+// les anciennement six boucles deviennent six appels du mixin
 
 @use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
 
 :root {
   --font-family: #{v.$font-family};
 
-  @each $name, $value in v.$colors {
-    --color-#{$name}: #{$value};
-  }
-  @each $name, $value in v.$font-sizes {
-    --font-size-#{$name}: #{$value};
-  }
-  @each $name, $value in v.$line-heights {
-    --lh-#{$name}: #{$value};
-  }
-  @each $name, $value in v.$font-weights {
-    --weight-#{$name}: #{$value};
-  }
-  @each $name, $value in v.$spaces {
-    --space-#{$name}: #{$value};
-  }
-  @each $name, $value in v.$radii {
-    --radius-#{$name}: #{$value};
-  }
-  @each $name, $value in v.$border-widths {
-    --border-#{$name}: #{$value};
-  }
+  @include m.expose("color", v.$colors);
+  @include m.expose("font-size", v.$font-sizes);
+  @include m.expose("lh", v.$line-heights);
+  @include m.expose("weight", v.$font-weights);
+  @include m.expose("space", v.$spaces);
+  @include m.expose("radius", v.$radii);
+  @include m.expose("border", v.$border-widths);
 }

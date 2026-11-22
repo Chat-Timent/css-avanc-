@@ -1,5 +1,7 @@
 // module button : base color, couleurs, tailles, icone, compteur
 
+@use "../abstracts/mixins" as m;
+
 .button {
   position: relative;
   display: inline-flex;
@@ -25,46 +27,40 @@
     cursor: not-allowed;
   }
 
+  // couleur avec le mixin
   &--primary {
-    color: var(--color-bg);
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-
-    &:hover:not(:disabled) {
-      background-color: var(--color-primary-hover);
-      border-color: var(--color-primary-hover);
-    }
+    @include m.button-color(
+      var(--color-bg),
+      var(--color-primary),
+      $hover-bg: var(--color-primary-hover),
+      $hover-border: var(--color-primary-hover)
+    );
   }
 
   &--secondary {
-    color: var(--color-bg);
-    background-color: var(--color-text);
-    border-color: var(--color-text);
-
-    &:hover:not(:disabled) {
-      background-color: var(--color-text-body);
-      border-color: var(--color-text-body);
-    }
+    @include m.button-color(
+      var(--color-bg),
+      var(--color-text),
+      $hover-bg: var(--color-text-body),
+      $hover-border: var(--color-text-body)
+    );
   }
 
   &--outline {
-    color: var(--color-text);
-    background-color: var(--color-bg);
-    border-color: var(--color-text);
-
-    &:hover:not(:disabled) {
-      background-color: var(--color-bg-alt);
-    }
+    @include m.button-color(
+      var(--color-text),
+      var(--color-bg),
+      var(--color-text),
+      $hover-bg: var(--color-bg-alt)
+    );
   }
 
   &--light {
-    color: var(--color-text);
-    background-color: var(--color-bg);
-    border-color: var(--color-bg);
-
-    &:hover:not(:disabled) {
-      background-color: var(--color-bg-alt);
-    }
+    @include m.button-color(
+      var(--color-text),
+      var(--color-bg),
+      $hover-bg: var(--color-bg-alt)
+    );
   }
 
   // taille moyenne par défaut
