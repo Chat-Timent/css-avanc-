@@ -4,6 +4,11 @@
 @use "base/reset";
 @use "base/typographie";
 @use "layout/grid";
+@use "layout/container";
+@use "layout/section";
+@use "layout/split";
+@use "layout/header";
+@use "layout/footer";
 @use "modules/swatch";
 @use "modules/showcase";
 @use "modules/button";
@@ -16,6 +21,12 @@
 @use "modules/checkbox";
 @use "modules/filter";
 @use "modules/faq";
+@use "modules/hero";
+@use "modules/page-head";
+@use "modules/stat";
+@use "modules/form";
+@use "modules/contact-box";
+@use "modules/details";
 
 // j'utilise "as" pour éviter les conflits car state/button et modules/button
 // sont considérés comme identiques et créent un conflit
@@ -24,3 +35,4 @@
 @use "state/field" as state-field;
 @use "state/filter" as state-filter;
 @use "state/faq" as state-faq;
+@use "state/header" as state-header;

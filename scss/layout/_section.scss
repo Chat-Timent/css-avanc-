@@ -1,0 +1,25 @@
+// bloc de page avec marges verticales et en-tête
+.l-section {
+  padding-block: var(--space-lg);
+
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  &__link {
+    font-size: var(--font-size-small);
+    font-weight: var(--weight-bold);
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  &__note {
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+  }
+}

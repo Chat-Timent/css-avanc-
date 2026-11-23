@@ -1,0 +1,23 @@
+// chiffre clé avec son libellé
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: calc(var(--space-xl) * 1.5);
+  padding: var(--space-md) var(--space-sm);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-alt);
+
+  &__value {
+    font-size: var(--font-size-title-lg);
+    font-weight: var(--weight-black);
+    line-height: var(--lh-title-lg);
+    color: var(--color-primary);
+  }
+
+  &__label {
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+  }
+}

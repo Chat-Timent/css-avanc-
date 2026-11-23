@@ -1,0 +1,50 @@
+// bandeau d'accueil avec image de fond, titre et boutons
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: calc(var(--space-xl) * 5);
+  padding-block: var(--space-xl);
+  overflow: hidden;
+  color: var(--color-bg);
+  background-color: var(--color-text);
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  &__eyebrow {
+    font-size: var(--font-size-small);
+    font-weight: var(--weight-bold);
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  &__title,
+  &__text {
+    max-width: calc(var(--space-xl) * 9);
+  }
+
+  &__title {
+    color: inherit;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+}

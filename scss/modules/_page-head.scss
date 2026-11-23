@@ -1,0 +1,42 @@
+// bandeau de titre d'une page
+.page-head {
+  --page-head-bg: var(--color-bg-alt);
+  --page-head-title: var(--color-text);
+  --page-head-text: var(--color-text-body);
+  --page-head-muted: var(--color-text-muted);
+  --page-head-transform: none;
+
+  padding-block: var(--space-lg);
+  background-color: var(--page-head-bg);
+
+  &__crumbs {
+    margin-bottom: var(--space-sm);
+    font-size: var(--font-size-small);
+    color: var(--page-head-muted);
+  }
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__title {
+    margin-block: var(--space-xs);
+    text-transform: var(--page-head-transform);
+    color: var(--page-head-title);
+  }
+
+  &__text {
+    font-size: var(--font-size-body);
+    color: var(--page-head-text);
+  }
+
+  // variante fiche artiste
+  &--scene {
+    --page-head-bg: var(--scene-color, var(--color-text));
+    --page-head-title: var(--color-bg);
+    --page-head-text: var(--color-bg);
+    --page-head-muted: var(--color-bg);
+    --page-head-transform: uppercase;
+  }
+}

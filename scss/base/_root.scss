@@ -6,6 +6,7 @@
 
 :root {
   --font-family: #{v.$font-family};
+  --container-width: #{v.$container-width};
 
   @include m.expose("color", v.$colors);
   @include m.expose("font-size", v.$font-sizes);

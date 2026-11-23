@@ -1,0 +1,8 @@
+// etat is-active d'un lien de navigation, page courante en gras avec soulignement
+.l-header {
+  &__link.is-active {
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+    border-bottom-color: var(--color-primary);
+  }
+}

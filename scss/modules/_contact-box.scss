@@ -1,0 +1,21 @@
+// encart « une autre question » avec un bouton d'action
+.contact-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-alt);
+
+  &__title {
+    font-size: var(--font-size-body);
+    line-height: var(--lh-body);
+    color: var(--color-text);
+  }
+
+  &__text {
+    font-size: var(--font-size-small);
+  }
+}

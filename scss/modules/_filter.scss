@@ -1,0 +1,12 @@
+// pastille cliquable pour filtrer par scène
+
+.filter {
+  padding: var(--space-xs) var(--space-md);
+  border: var(--border-thin) solid var(--color-field-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-small);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  cursor: pointer;
+}

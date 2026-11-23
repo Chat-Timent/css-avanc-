@@ -1,0 +1,65 @@
+// logo, navigation principale et actions, commun à toutes les pages
+.l-header {
+  border-bottom: var(--border-thin) solid var(--color-border);
+  background-color: var(--color-bg);
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding-block: var(--space-sm);
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  &__mark {
+    width: var(--space-md);
+    height: var(--space-md);
+    border: var(--border-thick) solid var(--color-primary);
+    border-radius: var(--radius-pill);
+  }
+
+  &__name {
+    display: block;
+    font-size: var(--font-size-small);
+    font-weight: var(--weight-black);
+    line-height: var(--lh-small);
+  }
+
+  &__tagline {
+    display: block;
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  &__link {
+    padding-block: var(--space-xs);
+    border-bottom: var(--border-thick) solid transparent;
+    font-size: var(--font-size-small);
+    color: var(--color-text-body);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: var(--space-xs);
+  }
+}

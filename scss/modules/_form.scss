@@ -1,0 +1,46 @@
+// panneau de formulaire
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border: var(--border-thin) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  &__title {
+    font-size: var(--font-size-title-md);
+    line-height: var(--lh-title-md);
+  }
+
+  &__intro {
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(var(--space-xl) * 4), 1fr));
+    gap: var(--space-sm) var(--space-md);
+  }
+
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+  }
+
+  &__total {
+    font-size: var(--font-size-intro);
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+  }
+}

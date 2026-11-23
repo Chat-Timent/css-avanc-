@@ -1,0 +1,7 @@
+// deux blocs côte à côte, qui passent l'un sous l'autre si la place manque
+.l-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(var(--space-xl) * 5), 1fr));
+  align-items: center;
+  gap: var(--space-lg);
+}
