@@ -27,6 +27,7 @@
 @use "modules/form";
 @use "modules/contact-box";
 @use "modules/details";
+@use "modules/media";
 
 // j'utilise "as" pour éviter les conflits car state/button et modules/button
 // sont considérés comme identiques et créent un conflit

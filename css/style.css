@@ -907,6 +907,13 @@ h3 {
   color: var(--color-text);
 }
 
+.media {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
 .button.is-loading {
   color: transparent;
   pointer-events: none;

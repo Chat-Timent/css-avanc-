@@ -1,0 +1,7 @@
+// image de contenu aux coins arrondis
+.media {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+  }
