@@ -6,7 +6,7 @@
   gap: var(--space-xs);
   padding: var(--space-md);
   border-radius: var(--radius-md);
-  color: var(--color-bg);
+  color: var(--scene-text, var(--color-white));
   background-color: var(--scene-color, var(--color-text));
 
   &__title {

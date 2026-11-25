@@ -5,11 +5,19 @@
 - Syntaxe BEM : `block`, `block__element`, `block--modifier`.
 
 ## Préfixes
-- Mise en page : `l-` (`l-header`, `l-footer`, `l-grid`, `l-grid--cards`, `l-grid--column`)
+- Mise en page : `l-` (`l-container`, `l-section`, `l-split`, `l-grid`, `l-header`, `l-footer`), définis dans `scss/layout/`
+  - `l-section` : éléments `__head`, `__link`, `__note`
+  - `l-grid` : modificateurs `--cards`, `--column`
+  - `l-header` : éléments `__inner`, `__logo`, `__mark`, `__name`, `__tagline`, `__nav`, `__link`, `__actions` ; état `is-active` sur `__link`
+  - `l-footer` : éléments `__inner`, `__col`, `__title`, `__text`, `__list`, `__link`, `__legal`
 - État : `is-` (`is-active`, `is-open`, `is-error`, `is-loading`), définis dans `scss/state/`
-- Thème : `theme-` (`theme-lake`, `theme-forest`, `theme-kiosk`, `theme-dark`)
+- Thème : `theme-`, définis dans `scss/theme/`
+  - `theme-lake`, `theme-forest`, `theme-kiosk` : se posent sur un composant (carte, bandeau de scène, bandeau de page) et définissent `--scene-color` et `--scene-text`
+  - `theme-dark` : se pose sur `<html>` et remplace les couleurs de surface et de texte
 
-Les couleurs de scène des cartes viendront des thèmes (étape 8), via la propriété `--scene-color`.
+## Attributs `data-`
+- `data-theme-toggle` : bouton qui bascule le mode sombre (utilisé par `js/theme.js`)
+- `data-total` : total de la réservation (réservé pour un futur calcul en JS)
 
 ## Composants (modules)
 - `button` : éléments `__icon`, `__counter` ; modificateurs `--primary`, `--secondary`, `--outline`, `--light`, `--small`, `--large`, `--icon-only` ; état `is-loading`
@@ -22,5 +30,12 @@ Les couleurs de scène des cartes viendront des thèmes (étape 8), via la propr
 - `checkbox` : élément `__input`
 - `filter` : état `is-active`
 - `faq` : éléments `__question`, `__icon`, `__answer` ; état `is-open`
+- `hero` : éléments `__image`, `__content`, `__eyebrow`, `__title`, `__text`, `__actions`
+- `page-head` : éléments `__crumbs`, `__link`, `__title`, `__text` ; modificateur `--scene`
+- `stat` : éléments `__value`, `__label`
+- `form` : éléments `__head`, `__title`, `__intro`, `__grid`, `__footer`, `__total`
+- `contact-box` : éléments `__title`, `__text`
+- `details` : éléments `__term`, `__value`
+- `media` : image de contenu aux coins arrondis
 - `swatch` : éléments `__color`, `__name` ; le modificateur de `__color` suit le nom de chaque couleur (`--primary`, `--lake`…), uniquement pour la page des composants
 - `showcase` : modificateur `--dark`, uniquement pour la page des composants

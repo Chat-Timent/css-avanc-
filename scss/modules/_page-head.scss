@@ -33,10 +33,10 @@
 
   // variante fiche artiste
   &--scene {
-    --page-head-bg: var(--scene-color, var(--color-text));
-    --page-head-title: var(--color-bg);
-    --page-head-text: var(--color-bg);
-    --page-head-muted: var(--color-bg);
+    --page-head-bg: var(--scene-color, var(--color-ink));
+    --page-head-title: var(--scene-text, var(--color-white));
+    --page-head-text: var(--scene-text, var(--color-white));
+    --page-head-muted: var(--scene-text, var(--color-white));
     --page-head-transform: uppercase;
   }
 }

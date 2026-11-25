@@ -1,0 +1,9 @@
+// themes de scène : exposent --scene-color et --scene-text aux modules qui les lisent
+@use "../abstracts/variables" as v;
+
+@each $scene, $text in v.$scene-text-colors {
+  .theme-#{$scene} {
+    --scene-color: var(--color-#{$scene});
+    --scene-text: #{$text};
+  }
+}

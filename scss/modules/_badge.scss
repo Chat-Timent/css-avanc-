@@ -4,9 +4,9 @@
 
 // statuts (nom, couleur de fond et du texte)
 $statuses: (
-  ("new", "forest", var(--color-bg)),
-  ("few-left", "accent", var(--color-text)),
-  ("sold-out", "error", var(--color-bg)),
+  ("new", "forest", var(--color-white)),
+  ("few-left", "accent", var(--color-ink)),
+  ("sold-out", "error", var(--color-white)),
 );
 
 .badge {

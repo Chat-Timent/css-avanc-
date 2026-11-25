@@ -1,0 +1,7 @@
+// theme sombre : remplace les couleurs de surface et de texte
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.theme-dark {
+  @include m.expose("color", v.$colors-dark);
+}

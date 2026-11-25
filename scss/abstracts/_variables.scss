@@ -15,6 +15,8 @@ $colors: (
   "lake": #1f4e8c,
   "forest": #2f6b3a,
   "kiosk": #b87a1e,
+  "white": #ffffff,
+  "ink": #1c1b2e,
 );
 
 $font-family: "Inter", system-ui, sans-serif;
@@ -63,9 +65,21 @@ $border-widths: (
 );
 
 $scene-text-colors: (
-  "lake": var(--color-bg),
-  "forest": var(--color-bg),
-  "kiosk": var(--color-text),
+  "lake": var(--color-white),
+  "forest": var(--color-white),
+  "kiosk": var(--color-ink),
+);
+
+// couleurs remplacées en mode sombre (les autres jetons restent identiques).
+$colors-dark: (
+  "text": #f4f5f7,
+  "text-body": #d5d7df,
+  "text-muted": #9a9db0,
+  "bg": #14131f,
+  "bg-alt": #1f1e2e,
+  "border": #34334a,
+  "field-border": #4a4963,
+  "error": #ff7a70,
 );
 
 $container-width: 1200px;

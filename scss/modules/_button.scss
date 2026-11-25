@@ -30,7 +30,7 @@
   // couleur avec le mixin
   &--primary {
     @include m.button-color(
-      var(--color-bg),
+      var(--color-white),
       var(--color-primary),
       $hover-bg: var(--color-primary-hover),
       $hover-border: var(--color-primary-hover)
@@ -92,7 +92,7 @@
     font-size: var(--font-size-small);
     line-height: var(--space-md);
     text-align: center;
-    color: var(--color-bg);
+    color: var(--color-white);
     background-color: var(--color-primary);
   }
 }

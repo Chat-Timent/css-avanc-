@@ -6,8 +6,8 @@
   min-height: calc(var(--space-xl) * 5);
   padding-block: var(--space-xl);
   overflow: hidden;
-  color: var(--color-bg);
-  background-color: var(--color-text);
+  color: var(--color-white);
+  background-color: var(--color-ink);
 
   &__image {
     position: absolute;
