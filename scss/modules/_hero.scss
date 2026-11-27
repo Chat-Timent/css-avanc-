@@ -1,4 +1,6 @@
 // bandeau d'accueil avec image de fond, titre et boutons
+@use "../abstracts/variables" as v;
+
 .hero {
   position: relative;
   display: flex;
@@ -9,17 +11,25 @@
   color: var(--color-white);
   background-color: var(--color-ink);
 
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: color-mix(in srgb, var(--color-ink) 40%, transparent);
+  }
+
   &__image {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.6;
   }
 
   &__content {
     position: relative;
+    z-index: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -40,6 +50,11 @@
 
   &__title {
     color: inherit;
+
+    @container page (max-width: #{v.$container-sm}) {
+      font-size: var(--font-size-title-lg);
+      line-height: var(--lh-title-lg);
+    }
   }
 
   &__actions {

@@ -1,41 +1,59 @@
-// charge tout les partials dans l'ordre
+// charge tous les partials dans des couches (@layer) 
+// l'ordre des couches fixe la priorité, plus besoin d'alias pour les états
 
-@use "base/root";
-@use "base/reset";
-@use "base/typographie";
-@use "layout/grid";
-@use "layout/container";
-@use "layout/section";
-@use "layout/split";
-@use "layout/header";
-@use "layout/footer";
-@use "modules/swatch";
-@use "modules/showcase";
-@use "modules/button";
-@use "modules/badge";
-@use "modules/card";
-@use "modules/pass";
-@use "modules/scene-banner";
-@use "modules/info-block";
-@use "modules/field";
-@use "modules/checkbox";
-@use "modules/filter";
-@use "modules/faq";
-@use "modules/hero";
-@use "modules/page-head";
-@use "modules/stat";
-@use "modules/form";
-@use "modules/contact-box";
-@use "modules/details";
-@use "modules/media";
-@use "theme/scenes";
-@use "theme/dark";
+@use "sass:meta";
 
-// j'utilise "as" pour éviter les conflits car state/button et modules/button
-// sont considérés comme identiques et créent un conflit
+@layer reset, base, layout, modules, state, theme;
 
-@use "state/button" as state-button;
-@use "state/field" as state-field;
-@use "state/filter" as state-filter;
-@use "state/faq" as state-faq;
-@use "state/header" as state-header;
+@layer reset {
+  @include meta.load-css("base/reset");
+}
+
+@layer base {
+  @include meta.load-css("base/root");
+  @include meta.load-css("base/typographie");
+}
+
+@layer layout {
+  @include meta.load-css("layout/grid");
+  @include meta.load-css("layout/container");
+  @include meta.load-css("layout/section");
+  @include meta.load-css("layout/split");
+  @include meta.load-css("layout/header");
+  @include meta.load-css("layout/footer");
+}
+
+@layer modules {
+  @include meta.load-css("modules/swatch");
+  @include meta.load-css("modules/showcase");
+  @include meta.load-css("modules/button");
+  @include meta.load-css("modules/badge");
+  @include meta.load-css("modules/card");
+  @include meta.load-css("modules/pass");
+  @include meta.load-css("modules/scene-banner");
+  @include meta.load-css("modules/info-block");
+  @include meta.load-css("modules/field");
+  @include meta.load-css("modules/checkbox");
+  @include meta.load-css("modules/filter");
+  @include meta.load-css("modules/faq");
+  @include meta.load-css("modules/hero");
+  @include meta.load-css("modules/page-head");
+  @include meta.load-css("modules/stat");
+  @include meta.load-css("modules/form");
+  @include meta.load-css("modules/contact-box");
+  @include meta.load-css("modules/details");
+  @include meta.load-css("modules/media");
+}
+
+@layer state {
+  @include meta.load-css("state/button");
+  @include meta.load-css("state/field");
+  @include meta.load-css("state/filter");
+  @include meta.load-css("state/faq");
+  @include meta.load-css("state/header");
+}
+
+@layer theme {
+  @include meta.load-css("theme/scenes");
+  @include meta.load-css("theme/dark");
+}

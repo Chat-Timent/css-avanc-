@@ -11,6 +11,8 @@
   background-color: var(--color-bg);
 
   &__badge {
+    --badge-bg: var(--color-accent);
+    color: var(--color-ink);
     position: absolute;
     top: calc(var(--space-sm) * -1);
     left: var(--space-md);

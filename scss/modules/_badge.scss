@@ -4,9 +4,9 @@
 
 // statuts (nom, couleur de fond et du texte)
 $statuses: (
-  ("new", "forest", var(--color-white)),
-  ("few-left", "accent", var(--color-ink)),
-  ("sold-out", "error", var(--color-white)),
+  ("new", "forest", var(--color-forest)),
+  ("few-left", "accent", var(--color-text)),
+  ("sold-out", "error", var(--color-error)),
 );
 
 .badge {
@@ -18,7 +18,7 @@ $statuses: (
   font-weight: var(--weight-bold);
   line-height: 1;
   color: var(--color-text);
-  background-color: var(--badge-color, var(--color-bg-alt));
+  background-color: var(--badge-bg, var(--badge-color, var(--color-bg-alt)));
 
   @each $scene, $text in v.$scene-text-colors {
     &--#{$scene} {
@@ -30,6 +30,7 @@ $statuses: (
   @each $status, $color, $text in $statuses {
     &--#{$status} {
       --badge-color: var(--color-#{$color});
+      --badge-bg: color-mix(in srgb, var(--color-#{$color}) 20%, var(--color-bg));
       color: $text;
     }
   }

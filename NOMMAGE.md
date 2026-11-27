@@ -6,6 +6,7 @@
 
 ## Préfixes
 - Mise en page : `l-` (`l-container`, `l-section`, `l-split`, `l-grid`, `l-header`, `l-footer`), définis dans `scss/layout/`
+  - `l-container` : conteneur nommé `page` pour les règles `@container`
   - `l-section` : éléments `__head`, `__link`, `__note`
   - `l-grid` : modificateurs `--cards`, `--column`
   - `l-header` : éléments `__inner`, `__logo`, `__mark`, `__name`, `__tagline`, `__nav`, `__link`, `__actions` ; état `is-active` sur `__link`
@@ -14,6 +15,10 @@
 - Thème : `theme-`, définis dans `scss/theme/`
   - `theme-lake`, `theme-forest`, `theme-kiosk` : se posent sur un composant (carte, bandeau de scène, bandeau de page) et définissent `--scene-color` et `--scene-text`
   - `theme-dark` : se pose sur `<html>` et remplace les couleurs de surface et de texte
+
+## Couches CSS (`@layer`)
+Ordre, de la moins à la plus prioritaire : `reset`, `base`, `layout`, `modules`, `state`, `theme`.
+Chaque dossier de `scss/` correspond à une couche, chargée dans `scss/main.scss`.
 
 ## Attributs `data-`
 - `data-theme-toggle` : bouton qui bascule le mode sombre (utilisé par `js/theme.js`)

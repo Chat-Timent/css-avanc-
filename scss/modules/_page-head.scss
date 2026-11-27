@@ -1,4 +1,6 @@
 // bandeau de titre d'une page
+@use "../abstracts/variables" as v;
+
 .page-head {
   --page-head-bg: var(--color-bg-alt);
   --page-head-title: var(--color-text);
@@ -24,6 +26,11 @@
     margin-block: var(--space-xs);
     text-transform: var(--page-head-transform);
     color: var(--page-head-title);
+
+    @container page (max-width: #{v.$container-sm}) {
+      font-size: var(--font-size-title-lg);
+      line-height: var(--lh-title-lg);
+    }
   }
 
   &__text {

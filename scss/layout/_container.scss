@@ -1,5 +1,9 @@
 // centre le contenu et limite sa largeur
+// et sert de conteneur nommé "page" aux règles @container des modules
+
 .l-container {
+  container-name: page;
+  container-type: inline-size;
   max-width: var(--container-width);
   margin-inline: auto;
   padding-inline: var(--space-md);

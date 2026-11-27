@@ -1,4 +1,6 @@
 // panneau de formulaire
+@use "../abstracts/variables" as v;
+
 .form {
   display: flex;
   flex-direction: column;
@@ -7,6 +9,9 @@
   border: var(--border-thin) solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-bg);
+  @container page (max-width: #{v.$container-sm}) {
+    padding: var(--space-md);
+  }
 
   &__head {
     display: flex;
