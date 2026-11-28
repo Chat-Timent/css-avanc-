@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "sass:build": "sass scss/main.scss css/style.css",
+    "sass:prod": "sass scss/main.scss css/style.css --style=compressed",
     "sass:watch": "sass --watch scss/main.scss css/style.css"
   },
   "keywords": [],

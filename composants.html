@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bibliothèque de composants – Festival Résonances</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js" defer></script>
 </head>
 <body>
   <main>
@@ -29,6 +30,8 @@
       <li class="swatch"><span class="swatch__color swatch__color--lake"></span><span class="swatch__name">lake</span></li>
       <li class="swatch"><span class="swatch__color swatch__color--forest"></span><span class="swatch__name">forest</span></li>
       <li class="swatch"><span class="swatch__color swatch__color--kiosk"></span><span class="swatch__name">kiosk</span></li>
+      <li class="swatch"><span class="swatch__color swatch__color--white"></span><span class="swatch__name">white</span></li>
+      <li class="swatch"><span class="swatch__color swatch__color--ink"></span><span class="swatch__name">ink</span></li>
     </ul>
 
     <h3>Typographie</h3>
@@ -36,6 +39,7 @@
     <h2>Titre de section</h2>
     <h3>Sous-titre</h3>
     <p>Texte courant : le festival se tient chaque été pendant trois jours au bord d'un lac.</p>
+
     <h2>Boutons</h2>
 
     <h3>Couleurs</h3>
@@ -102,6 +106,7 @@
       <span class="badge badge--forest badge--outline">Contour</span>
       <span class="badge badge--kiosk badge--square">Angles droits</span>
     </div>
+
     <h2>Cartes</h2>
 
     <h3>Carte de base</h3>
@@ -221,6 +226,7 @@
         <p class="info-block__text">En train : gare de Saint-Aulnes, puis navette gratuite.</p>
       </article>
     </div>
+
     <h2>Formulaires</h2>
 
     <h3>Champ de saisie</h3>
@@ -258,6 +264,29 @@
       <label class="checkbox"><input class="checkbox__input" type="checkbox"> Recevoir la newsletter</label>
     </div>
 
+    <h3>Panneau de formulaire</h3>
+    <form class="form" action="#">
+      <div class="form__head">
+        <h2 class="form__title">Réserver</h2>
+        <p class="form__intro">Les champs marqués d'un astérisque sont obligatoires.</p>
+      </div>
+      <div class="form__grid">
+        <div class="field">
+          <label class="field__label" for="demo-prenom">Prénom *</label>
+          <input class="field__input" id="demo-prenom" type="text">
+        </div>
+        <div class="field">
+          <label class="field__label" for="demo-nom">Nom *</label>
+          <input class="field__input" id="demo-nom" type="text">
+        </div>
+      </div>
+      <label class="checkbox"><input class="checkbox__input" type="checkbox"> J'accepte les conditions générales de vente *</label>
+      <div class="form__footer">
+        <p class="form__total">Total : <span data-total>238 €</span></p>
+        <button class="button button--primary" type="button">Valider la réservation</button>
+      </div>
+    </form>
+
     <h2>Filtres</h2>
     <div class="l-grid">
       <button class="filter">Toutes les scènes</button>
@@ -276,6 +305,126 @@
         <button class="faq__question">Puis-je revendre mon pass ? <span class="faq__icon" aria-hidden="true">▾</span></button>
         <div class="faq__answer"><p>Oui, via la plateforme officielle de revente, jusqu'à 48 heures avant le festival. Le pass est alors réédité au nom du nouvel acheteur.</p></div>
       </div>
+    </div>
+
+    <h2>Bandeaux</h2>
+
+    <h3>Bandeau d'accueil</h3>
+    <section class="hero">
+      <div class="hero__content l-container">
+        <p class="hero__eyebrow">9, 10 et 11 juillet 2027 · Lac des Aulnes</p>
+        <h1 class="hero__title">Trois jours, trois scènes, un lac.</h1>
+        <p class="hero__text">Pop et rock au bord de l'eau, musiques électroniques sous les arbres, jazz au kiosque.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#">Réserver mon pass</a>
+          <a class="button button--light" href="#">Voir le programme</a>
+        </div>
+      </div>
+    </section>
+
+    <h3>Bandeau de page</h3>
+    <section class="page-head">
+      <div class="l-container">
+        <nav class="page-head__crumbs" aria-label="Fil d'Ariane"><a class="page-head__link" href="#">Accueil</a> / Programme</nav>
+        <h1 class="page-head__title">Programme</h1>
+        <p class="page-head__text">Quarante concerts sur trois jours.</p>
+      </div>
+    </section>
+
+    <h3>Bandeau de page, variante scène</h3>
+    <section class="page-head page-head--scene theme-forest">
+      <div class="l-container">
+        <nav class="page-head__crumbs" aria-label="Fil d'Ariane"><a class="page-head__link" href="#">Accueil</a> / <a class="page-head__link" href="#">Programme</a> / Ostra</nav>
+        <span class="badge">Scène de la Forêt</span>
+        <h1 class="page-head__title">Ostra</h1>
+        <p class="page-head__text">Électro · Samedi 10 juillet · 23 h 45</p>
+      </div>
+    </section>
+
+    <h2>Informations</h2>
+
+    <h3>Chiffres clés</h3>
+    <ul class="l-grid">
+      <li class="stat"><span class="stat__value">40</span><span class="stat__label">artistes</span></li>
+      <li class="stat"><span class="stat__value">3</span><span class="stat__label">scènes</span></li>
+      <li class="stat"><span class="stat__value">3</span><span class="stat__label">jours</span></li>
+    </ul>
+
+    <h3>Détails</h3>
+    <dl class="details">
+      <dt class="details__term">Jour</dt>
+      <dd class="details__value">Samedi 10 juillet</dd>
+      <dt class="details__term">Heure</dt>
+      <dd class="details__value">23 h 45 – 01 h 00</dd>
+      <dt class="details__term">Scène</dt>
+      <dd class="details__value">Scène de la Forêt</dd>
+    </dl>
+
+    <h3>Encart de contact</h3>
+    <div class="contact-box">
+      <div>
+        <h4 class="contact-box__title">Une autre question ?</h4>
+        <p class="contact-box__text">L'équipe vous répond du lundi au vendredi, de 9 h à 18 h.</p>
+      </div>
+      <a class="button button--secondary" href="#">Nous écrire</a>
+    </div>
+
+    <h3>Image et texte</h3>
+    <div class="l-split">
+      <img class="media" src="assets/img/ostra.jpg" alt="Ostra sur scène derrière ses machines">
+      <p>Ostra est le projet du producteur lyonnais Élie Marchand. Nourri de techno berlinoise et de musiques de film, il construit des sets lents qui montent jusqu'à l'aube.</p>
+    </div>
+
+    <h2>Thèmes de scène</h2>
+    <p>Les classes theme-lake, theme-forest et theme-kiosk donnent sa couleur de scène au composant qui les porte.</p>
+    <div class="l-grid l-grid--cards">
+      <article class="scene-banner theme-lake">
+        <h4 class="scene-banner__title">Scène du Lac</h4>
+        <p class="scene-banner__style">Pop et rock</p>
+        <a class="scene-banner__link" href="#">Découvrir la scène →</a>
+      </article>
+      <article class="scene-banner theme-forest">
+        <h4 class="scene-banner__title">Scène de la Forêt</h4>
+        <p class="scene-banner__style">Musiques électroniques</p>
+        <a class="scene-banner__link" href="#">Découvrir la scène →</a>
+      </article>
+      <article class="scene-banner theme-kiosk">
+        <h4 class="scene-banner__title">Le Kiosque</h4>
+        <p class="scene-banner__style">Jazz et acoustique</p>
+        <a class="scene-banner__link" href="#">Découvrir la scène →</a>
+      </article>
+    </div>
+    <div class="l-grid l-grid--cards">
+      <article class="card theme-lake">
+        <div class="card__image"></div>
+        <div class="card__body">
+          <span class="badge badge--lake">Scène du Lac</span>
+          <h3 class="card__title">Marée Basse</h3>
+          <p class="card__info">Rock · Ven. 9 · 20 h 15</p>
+        </div>
+      </article>
+      <article class="card theme-forest">
+        <div class="card__image"></div>
+        <div class="card__body">
+          <span class="badge badge--forest">Scène de la Forêt</span>
+          <h3 class="card__title">Vertige 808</h3>
+          <p class="card__info">Techno · Ven. 9 · 23 h 30</p>
+        </div>
+      </article>
+      <article class="card theme-kiosk">
+        <div class="card__image"></div>
+        <div class="card__body">
+          <span class="badge badge--kiosk">Le Kiosque</span>
+          <h3 class="card__title">Clara Ninon Quartet</h3>
+          <p class="card__info">Jazz vocal · Ven. 9 · 18 h 30</p>
+        </div>
+      </article>
+    </div>
+
+    <h2>Mode sombre</h2>
+    <p>Le bouton ajoute ou retire la classe theme-dark sur la balise html. Le choix est mémorisé.</p>
+    <div class="showcase">
+      <button class="button button--outline" type="button" data-theme-toggle>Mode sombre</button>
     </div>
   </main>
 </body>
